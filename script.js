@@ -20,41 +20,16 @@ async function fetchData(url) {
     showProducts();
 }
 
-const formatDate = date => {
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    const hour = date.getHours();
-    const minute = date.getMinutes();
-    const second = date.getSeconds();
-
-    return `${day}/${month}/${year}, ${hour}:${minute}:${second}`;
-}
-
 const addProduct = product => {
-    const productItem = document.createElement('div');
-    productItem.classList.add('list-group-item');
-
-    const date = document.createElement('span');
-    date.textContent = formatDate(new Date());
-    
-    const quantityStars = Math.floor(product.rating.rate);
-
-    const productName = document.createElement('div');
-    productName.classList.add('fw-bold');
-    productName.textContent = cutString(product.title);
-
-    const b_container = document.createElement('div');
-    b_container.classList.add('d-flex', 'gap-3');
-
-    b_container.appendChild(date);
-    b_container.appendChild(stars(quantityStars));
-
-    productItem.appendChild(productName);
-    productItem.appendChild(b_container);
-
-    container.appendChild(productItem)
+    container.innerHTML += `
+    <div class="list-group-item">
+        <div class="fw-bold">${product.title}</div>
+        <div class="d-flex gap-3">
+            <span>${new Date().toLocaleString()}</span>
+            <div>${stars(Math.floor(product.rating.rate)).outerHTML}</div>
+        </div>
+    </div>
+    `;
 };
 
 function showProducts() {
