@@ -43,8 +43,9 @@ function showProducts() {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item';
 
-        listItem.innerHTML = `<strong>Nombre:</strong> ${tituloRecortado}<br><strong>Clasificación:</strong> ${stars(producto.rating.rate)}`;
+        listItem.innerHTML = `<strong>${tituloRecortado}<br>${stars(producto.rating.rate)}`;
         listaProductos.appendChild(listItem);
+        
     });
 
     productsContainer.appendChild(listaProductos);
