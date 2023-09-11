@@ -2,6 +2,11 @@
 
 ## Ejercicio de semana 12 de Fase 2 JaP: Listado de productos con su calificación en estrellas, fecha y hora de obtención de los mismo
 
+Participantes:
+Franco Torino
+Iván Burgio
+Matias Wilkins
+
 Aplicar las buenas prácticas trabajadas en las clases anteriores para:
 
 * Tener un código modularizado
