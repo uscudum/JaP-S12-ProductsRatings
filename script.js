@@ -53,7 +53,7 @@ function stars(puntuacion) {
     const estrellasLlenas = puntuacionEntera; // Estrellas llenas
     const estrellasVacias = 5 - puntuacionEntera; // Estrellas vacías
 
-    const resultado = '⭐'.repeat(estrellasLlenas) + '☆'.repeat(estrellasVacias);
+    const resultado = '★'.repeat(estrellasLlenas) + '☆'.repeat(estrellasVacias);
     return `${resultado} (${puntuacion.toFixed(1)}/5)`;
 }
 
