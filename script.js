@@ -30,10 +30,6 @@ function showProducts() {
 
     const fechaHoraObtencion = new Date().toLocaleString();
 
-    const header = document.createElement('h3');
-    header.textContent = `Productos obtenidos el ${fechaHoraObtencion}`;
-    productsContainer.appendChild(header);
-
     const listaProductos = document.createElement('ul');
     listaProductos.className = 'list-group';
 
@@ -43,7 +39,7 @@ function showProducts() {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item';
 
-        listItem.innerHTML = `<strong>${tituloRecortado}<br>${fechaHoraObtencion} ${stars(producto.rating.rate)}`;
+        listItem.innerHTML = `${tituloRecortado}<br>${fechaHoraObtencion} ${stars(producto.rating.rate)}`;
         listaProductos.appendChild(listItem);
         
     });
