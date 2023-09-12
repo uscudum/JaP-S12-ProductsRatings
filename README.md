@@ -1,3 +1,5 @@
+Código realizado por: Noelia Alvarez, Valeria Duarte y Daniel Abreu
+
 # JaP-S12-ProductRatings
 
 ## Ejercicio de semana 12 de Fase 2 JaP: Listado de productos con su calificación en estrellas, fecha y hora de obtención de los mismo
