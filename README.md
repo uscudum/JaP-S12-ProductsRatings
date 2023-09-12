@@ -19,3 +19,7 @@ Además de las buenas prácticas deberán desarrollar:
 
 Ejemeplo de cómo podrán organizar la información:
 <img src='https://github.com/uscudum/JaP-S12-ProductRatings/blob/master/Resultado.PNG' />
+
+Axel Alonso
+Nicolás Rodriguez Fabreau
+Franco Moreira
