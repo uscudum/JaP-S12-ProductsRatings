@@ -2,6 +2,8 @@
 
 ## Ejercicio de semana 12 de Fase 2 JaP: Listado de productos con su calificación en estrellas, fecha y hora de obtención de los mismo
 
+## Integrantes
+## Axel Alonso, Nicolas Rodriguez Fabreau, Franco Moreira
 Aplicar las buenas prácticas trabajadas en las clases anteriores para:
 
 * Tener un código modularizado
