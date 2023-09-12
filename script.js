@@ -1,7 +1,7 @@
 /*
- * En esta solución, hemos decidido crear aún más funciones
- * que las propuestas al inicio. Esto para modularizar más
- * y mejorando la legibilidad del código.
+ * Nuestra solución cuenta con una cantidad de funciones
+ * superior a las dadas en primera instancia. Esta decisión 
+ * viene a raíz de una modularización y legibilidad mayor del código.
  */
 
 
@@ -20,45 +20,43 @@ async function fetchData(url) {
     showProducts();
 }
 
+// La función 'addProduct' agrega un producto en el HTML.
 const addProduct = product => {
     container.innerHTML += `
     <div class="list-group-item">
-        <div class="fw-bold">${product.title}</div>
-        <div class="d-flex gap-3">
+        <div class="fw-bold">${cutString(product.title)}</div>
+        <div class="d-flex gap-2">
             <span>${new Date().toLocaleString()}</span>
-            <div>${stars(Math.floor(product.rating.rate)).outerHTML}</div>
+            ${stars(Math.floor(product.rating.rate)).outerHTML}
         </div>
     </div>
     `;
 };
 
+// Esta función recorre el array 'products' y lo muestra uno por uno.
 function showProducts() {
     products.forEach(product => {
         addProduct(product);
     });
 }
 
+// Función que retorna el código HTML de una estrella
 const addStar = (iteration, cantidad) => {
-    const star = document.createElement('i');
-    star.classList.add('fa', 'fa-star');
+    return `<i class="fa fa-star" style="color: ${iteration < cantidad ? '#ffa200' : '#252525'};"></i>`;
+};
 
-    iteration < cantidad ? star.setAttribute('style', 'color: #ffa200;') : star.setAttribute('style', 'color: #252525;')
-
-    return star;
-}
-
+// Esta función crea un elemento 'div' que termina retornando con todas las estrellas.
 function stars(cantidad) {
-    const starContainer = document.createElement('div');
-
+    const products = document.createElement('div');
     for (i = 0; i < 5; i++) {
-        starContainer.appendChild(addStar(i, cantidad));
+        products.innerHTML += addStar(i, cantidad);
     }
-
-    return starContainer;
+    return products;
 }
 
 
-/* Si el título supera los 20 carácteres, este se "corta",
+/* 
+ * Si el título supera los 20 carácteres, este se "corta",
  * mostrando signos de puntación al superar este límite.
  */
 function cutString(string) {
